@@ -1,6 +1,7 @@
 #include<iostream>
+#include<conio.h>
 #include<stdlib.h>
-#include<unistd.h>
+#include<Windows.h>
 #include<string.h>
 #include<ctime>
 using namespace std;
@@ -30,6 +31,8 @@ int main()
 		ex();
 	else
 		cout<<"Invalid Input. Close the program and run again.";
+	
+	getch();
 	return 0;
 }
 
@@ -44,7 +47,7 @@ void toss()
 		cout<<"(2) Tail"<<endl;
 		cin>>choose;
 		
-		sleep(300);
+		Sleep(300);
 		if (choose == 1)
 		{	
 			cout<<"Computer chooses tail"<<endl;
@@ -64,7 +67,7 @@ void toss()
 	
 	if ( choose == 2 && rand()%2 == 0)
 		{
-			sleep(200);
+			Sleep(200);
 			cout<<"You win"<<endl;
 			temp=1;
 			system("pause");
@@ -72,7 +75,7 @@ void toss()
 		}
 	else
 		{
-			sleep(200);
+			Sleep(200);
 			cout<<"Computer wins"<<endl;
 			cout<<"\nChooses to bat first"<<endl;
 			system("pause");
@@ -141,7 +144,7 @@ void playBatBall1()
 			cin>>run;
 			temp = (min + (rand() % (int)(max - min + 1)));
 			cout<<"\nCOMPUTER: "<<temp<<endl;
-			sleep(550);
+			Sleep(550);
 				
 				if (temp == run)
 				{
@@ -184,7 +187,7 @@ void sysBatBall2(int plyRun)
 			cin>>run;
 			temp = (min + (rand() % (int)(max - min + 1)));
 			cout<<"\nCOMPUTER: "<<temp<<endl;
-			sleep(550);				
+			Sleep(550);				
 			
 				if (temp == run)
 				{
@@ -247,7 +250,7 @@ void sysBatBall1()
 			cin>>temp;
 			run = (min + (rand() % (int)(max - min + 1)));
 			cout<<"\nCOMPUTER: "<<run<<endl;
-			sleep(550);
+			Sleep(550);
 							
 				if (temp == run)
 				{
@@ -290,7 +293,7 @@ void playBatBall2(int sysRun)
 			cin>>run;
 			temp = (min + (rand() % (int)(max - min + 1)));
 			cout<<"\nCOMPUTER: "<<temp<<endl;
-			sleep(550);
+			Sleep(550);
 							
 				if (temp == run)
 				{
